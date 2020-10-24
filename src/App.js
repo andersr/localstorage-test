@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import { Editor } from "./Editor";
 
 function App() {
   const [value, setValue] = useState('')
@@ -16,7 +17,7 @@ function App() {
   }, [value])
   return (
     <div className="App">
-      <input placeholder="persistent input" value={value} onChange={(e) => setValue(e.target.value)} />
+      <Editor />
     </div>
   );
 }
